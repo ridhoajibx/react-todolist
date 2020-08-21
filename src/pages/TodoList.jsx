@@ -24,6 +24,8 @@ const TodoList = () => {
     }
   };
 
+  const clearTodos = () => setTodos([]);
+
   const completeTodo = (index) => {
     const addedTodo = [...todos];
 
@@ -33,11 +35,13 @@ const TodoList = () => {
 
   const showAddToogle = () => setShowAdd(!showAdd);
 
-  console.log("todos", todos);
-
   return (
     <Paper>
-      <Header showAddToogle={showAddToogle} showAdd={showAdd} />
+      <Header
+        showAddToogle={showAddToogle}
+        showAdd={showAdd}
+        clearTodos={clearTodos}
+      />
 
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
 
