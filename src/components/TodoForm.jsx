@@ -12,6 +12,12 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return;
     }
 
+    if (value.length > 40) {
+      alert("todo characters must be less than 40 characters");
+      setValue("");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
