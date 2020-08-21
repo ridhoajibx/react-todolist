@@ -11,7 +11,7 @@ const Todo = (props) => {
   );
 };
 
-Todo.PropTypes = {
+Todo.propTypes = {
   text: PropTypes.string.isRequired
 };
 
