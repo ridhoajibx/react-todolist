@@ -1,20 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import Button from "./Button";
+
 const Header = ({ showAddToogle, showAdd, clearTodos }) => {
   return (
     <section className="header">
-      <button
-        className="header-btn main-black-color active"
-        onClick={showAddToogle}
-      >
-        {/* This is ternarry operator for showAdd state props */}
-        {showAdd ? "Finish" : "Add"}
-      </button>
+      <Button onCLick={showAddToogle} text={showAdd ? "Finish" : "Add"} />
+
       <h1 className="header-title">todo Lists</h1>
-      <button className="header-btn main-red-color active" onClick={clearTodos}>
-        Clear
-      </button>
+
+      <Button color="red" onCLick={clearTodos} text="Clear" align="right" />
     </section>
   );
 };
