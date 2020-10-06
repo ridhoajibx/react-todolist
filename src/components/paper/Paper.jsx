@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import style from './paper.module.css';
 
 // props adalah sebuah object yg berisi sbuah children
 
 const Paper = ({ children }) => {
   return (
-    <div className="container">
-      <div className="frame">{children}</div>
+    <div className={ style.container }>
+      <div className={ style.frame }>{children}</div>
     </div>
   );
 };
