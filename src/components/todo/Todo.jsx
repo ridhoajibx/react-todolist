@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import style from './todo.module.css';
 
 // props adalah sebuah object yg berisi sbuah children
 
 const Todo = ({ text, completeTodo, index, isCompleted }) => {
   return (
-    <div className="todo" onClick={() => completeTodo(index)}>
+    <div className={ style.todo } onClick={() => completeTodo(index)}>
       <div
-        className="todo-text"
+        className={ style.todoText }
         style={{ textDecoration: isCompleted ? "line-through" : "initial" }}
       >
         {text}
